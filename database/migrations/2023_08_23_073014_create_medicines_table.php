@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('descriptions');
             $table->decimal('price', 8, 2);
             $table->string('company_name');
-            $table->data('expiry_date');
+            $table->date('expiry_date');
             $table->timestamps();
         });
     }
