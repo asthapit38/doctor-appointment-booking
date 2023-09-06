@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('first_aid_kits', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->string('sku');
+            $table->integer('stock');
+            $table->text('descriptions');
+            $table->decimal('price', 8, 2);
             $table->timestamps();
         });
     }
